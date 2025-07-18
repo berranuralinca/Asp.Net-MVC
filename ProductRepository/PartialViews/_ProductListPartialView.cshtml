@@ -1,0 +1,26 @@
+﻿@using ProductRepository.ViewModels
+
+@model ProductListPartialViewModel
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Color</th>
+			<th>Size</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model.Products)
+		{
+			<tr>
+				<td>@item.Name</td>
+				<td>@item.Price</td>
+				<td>@item.Color</td>
+				<td>@item.Size</td>
+			</tr>
+		}
+	</tbody>
+</table>

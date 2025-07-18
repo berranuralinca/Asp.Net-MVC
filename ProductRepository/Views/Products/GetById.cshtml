@@ -1,0 +1,16 @@
+﻿@model ProductViewModel
+
+<div class="card" style="width: 18rem;">
+
+    <a class="btn btn-secondary text-white text-decoration-none" asp-controller="Products" asp-action="Index">Products</a>
+
+    <div><br /></div>
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">
+            <div>Price: @Model.Price</div>
+            <div>Color: @Model.Color</div>
+            <div>Product Date: @Model.ProductDate</div>
+        </p>
+    </div>
+</div>

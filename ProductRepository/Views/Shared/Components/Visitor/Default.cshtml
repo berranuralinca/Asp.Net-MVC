@@ -1,0 +1,33 @@
+﻿@model ProductRepository.ViewModels.VisitorViewModel
+
+<div class="alert-danger">@TempData["Message"]</div>
+
+@foreach(var item in ViewBag.visitorViewModels as List<VisitorViewModel>)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Visitor Name</th>
+                <th>VisitDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@item.VisitorName</td>
+                <td>@item.VisitDate</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+<form asp-controller="Home" asp-action="SaveVisitor" method="post">
+    <div class="mb-3">
+        <label asp-for="VisitorName" class="form-label">Your Name</label>
+        <input class="form-control" asp-for="VisitorName" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+

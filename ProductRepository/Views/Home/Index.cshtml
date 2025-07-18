@@ -1,0 +1,28 @@
+﻿@{
+	ViewData["Title"] = "Home";
+
+	//var product = new Product() { Name = "Sample Product", Price = 100.00m, Stock = 10 };
+}
+<div class="image-hover-container">
+	<a class="btn btn-secondary text-white text-decoration-none overlay-button"
+	   asp-controller="Products" asp-action="Index">
+		Products
+	</a>
+
+	<image-thumbnail image-src="/images/DigitialMarketing.png"></image-thumbnail>
+</div>
+
+
+@*
+<div class="row" >
+	<div class="col-md-3">
+
+		<product-show product="product"></product-show>
+	</div>
+	<div class="col-md-3">
+		@await Component.InvokeAsync("ProductList")
+	</div>
+
+</div>
+*@
+
